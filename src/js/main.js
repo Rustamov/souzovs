@@ -13,6 +13,40 @@ let $body,
 
 $(document).ready(function () {
     $body = $("body");
+
+    tabs();
+
+
+    function tabs() {
+        $(document).on('click', '[data-tab-target]', function (e) {
+          e.preventDefault();
+    
+          let $this = $(this);
+        //   $('.js-standart-slider.slick-initialized').slick('setPosition');
+          $this.addClass('is-active').siblings().removeClass('is-active');
+        //   var htmlActive = $this.html();
+        //   $this.closest('.tabs-wrap').find('.js-tabs-name-mob').html(htmlActive);
+          let targetTab = $(this).data('tab-target'),
+            tab = $(document).find('[data-tab="' + targetTab + '"]'),
+            tabGroup = tab.data('tab-group');
+    
+    
+          $(document).find('.is-active[data-tab-group="' + tabGroup + '"]').addClass('is-proccess');
+    
+    
+          setTimeout(function () {
+            $(document).find('[data-tab-group="' + tabGroup + '"]').removeClass('is-active').removeClass('is-proccess');
+            // tab.addClass('is-active');
+    
+            tab.show(0, function () {
+              $(this).addClass('is-active');
+    
+            });
+          }, 300)
+    
+    
+        });
+    }
 });
 
 window.globalOptions = {

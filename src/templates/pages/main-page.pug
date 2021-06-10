@@ -7,4 +7,317 @@ block variables
 block content
 	main.main
 		.container
-			p main-page
+			+b.SECTION.banner
+				+e.content
+					+e.H1.title Союз «Объединение вагоностроителей»
+					+e.inf
+						+e.inf-col
+							+e.SPAN.inf-main 35
+							+e.SPAN.inf-label Организаций
+						+e.inf-col 
+							+e.SPAN.inf-main 13
+							+e.SPAN.inf-label 
+								| Регионов
+								br
+								| России
+						+e.inf-col
+							+e.SPAN.inf-main 85%
+							+e.SPAN.inf-label
+								| Российского грузового
+								br
+								| вагоностроения
+				+e.bg
+					+e.IMG.bg-img(src="/img/banner.jpg" alt="Союз «Объединение вагоностроителей»")
+
+			+b.SECTION.s-news
+				+e.top
+					+e.top-left
+						+e.H2.title Новости
+
+					+e.top-right
+						+e.A.all-link(href="news.html") Все новости
+
+
+				+e.main
+					+e.list
+						+e.item
+							+b.A.news-list-item(href="news-item.html")
+								+e.SPAN.title Союз «Объединение вагоностроителей» отмечает 20-летний юбилей
+								+e.SPAN.text.text 27 марта Союз производителей и пользователей железнодорожного подвижного состава «Объединение вагоностроителей» (Союз ОВС) отмечает свой 20-летний юбилей. На протяжении значительного срока главная цель деятельности – быть эффективным провайдером идей и стратегий предпри...
+
+								+e.SPAN.bottom
+									+e.SPAN.bottom-left
+										+e.TIME.date 23 февраля 2021
+									+e.SPAN.bottom-right 
+										+e.SPAN.more Подробнее
+
+						+e.item
+							+b.A.news-list-item(href="news-item.html")
+								+e.SPAN.title Для поддержки вагоностроителей нужно выработать комплекс мер, содержащий и монетарные, и немонетарные меры
+								+e.SPAN.text.text По итогам заседания участники сошлись во мнении, что мероприятия такого рода, уже ставшие хорошей традицией, являются одним из действенных способов ведения дискуссии и нахождения общих точек соприкосновения для достижения...
+
+								+e.SPAN.bottom
+									+e.SPAN.bottom-left
+										+e.TIME.date 23 февраля 2021
+									+e.SPAN.bottom-right 
+										+e.SPAN.more Подробнее
+
+						+e.item
+							+b.A.news-list-item(href="news-item.html")
+								+e.SPAN.title В 2021 году спросом будут пользоваться специализированные и инновационные вагоны
+								+e.SPAN.text.text По итогам заседания участники сошлись во мнении, что мероприятия такого рода, уже ставшие хорошей традицией, являются одним из действенных способов ведения дискуссии и нахождения общих точек соприкосновения для достижения общих результатов, выражающихся в по...
+
+								+e.SPAN.bottom
+									+e.SPAN.bottom-left
+										+e.TIME.date 23 февраля 2021
+									+e.SPAN.bottom-right 
+										+e.SPAN.more Подробнее
+										
+
+		
+			+b.SECTION.s-events
+				+e.top
+					+e.top-left
+						+e.H2.title Мероприятия
+
+					+e.top-right
+						+e.A.all-link(href="events.html") Все мероприятия
+
+				+e.main
+					+e.main-left
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+						input(type="date" value="2021-09-9")
+
+
+					+e.main-right
+						+e.tabs
+							+b.UL.tabs
+								+e.LI.tab.is-active(data-tab-target="events-tab-1") 13 сентября
+								+e.LI.tab(data-tab-target="events-tab-2") 24 сентября
+								+e.LI.tab(data-tab-target="events-tab-3") 28 сентября
+							
+						+b.tabs-content
+							+e.wrap.is-active(data-tab="events-tab-1" data-tab-group="events-tabs")
+								+e.wrap-inner
+									+b.A.event-tab-item(href="event-item.html")
+										+e.SPAN.title XVIII Международная конференция «Рынок транспортных услуг: взаимодействие и партнерство
+										+e.SPAN.text.text 10 декабря 2020 года в 10:00 в онлайн-формате будет проходить XVIII Международная конференция «Рынок транспортных услуг: взаимодействие и партнерство». Организатор конференции: журнал «РЖД-Партнер» при поддержке Союза «Объединение вагоностроителей»
+
+										+e.SPAN.bottom
+											+e.SPAN.bottom-left
+												+e.TIME.date 
+													| 24 сентября 
+													+e.SPAN.date-sep / 
+													| 10:00
+												+e.ADDRESS.address г. Санкт-Петербург, Crowne Plaza St.Petersburg Airport
+											+e.SPAN.bottom-right 
+												+e.SPAN.more Подробнее
+
+							+e.wrap(data-tab="events-tab-2" data-tab-group="events-tabs")
+								+e.wrap-inner
+									+b.A.event-tab-item(href="event-item.html")
+										+e.SPAN.title Союз «Объединение вагоностроителей» отмечает 20-летний юбилей
+										+e.SPAN.text.text 27 марта Союз производителей и пользователей железнодорожного подвижного состава «Объединение вагоностроителей» (Союз ОВС) отмечает свой 20-летний юбилей. На протяжении значительного срока главная цель деятельности – быть эффективным провайдером идей и стратегий предпри...
+
+										+e.SPAN.bottom
+											+e.SPAN.bottom-left
+												+e.TIME.date 23 февраля 2021
+												+e.ADDRESS.address г. Санкт-Петербург, Crowne Plaza St.Petersburg Airport
+											+e.SPAN.bottom-right 
+												+e.SPAN.more Подробнее
+
+							+e.wrap(data-tab="events-tab-3" data-tab-group="events-tabs")
+								+e.wrap-inner
+									+b.A.event-tab-item(href="event-item.html")
+										+e.SPAN.title Союз «Объединение вагоностроителей» отмечает 20-летний юбилей
+										+e.SPAN.text.text 27 марта Союз производителей и пользователей железнодорожного подвижного состава «Объединение вагоностроителей» (Союз ОВС) отмечает свой 20-летний юбилей. На протяжении значительного срока главная цель деятельности – быть эффективным провайдером идей и стратегий предпри...
+
+										+e.SPAN.bottom
+											+e.SPAN.bottom-left
+												+e.TIME.date 23 февраля 2021
+												+e.ADDRESS.address г. Санкт-Петербург, Crowne Plaza St.Petersburg Airport
+											+e.SPAN.bottom-right 
+												+e.SPAN.more Подробнее
+
+
+
+			+b.SECTION.s-projects
+				+e.top
+					+e.H2.title Проекты Союза
+				
+				+e.list
+					+e.item 
+						+b.A.news-list-item(href="news-item.html")
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/project-item-1.jpg" width="370" height="275" alt="Цифровой грузовой вагон")
+							+e.SPAN.title Цифровой грузовой вагон
+
+					+e.item 
+						+b.A.news-list-item(href="news-item.html")
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/project-item-2.jpg" width="370" height="275" alt="Переход нового вагоностроения на кассетные подшипники")
+							+e.SPAN.title Переход нового вагоностроения на кассетные подшипники
+
+					+e.item 
+						+b.A.news-list-item(href="news-item.html")
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/project-item-3.jpg" width="370" height="275" alt="Поддержка грузового вагоностроения")
+							+e.SPAN.title Поддержка грузового вагоностроения
+
+					+e.item 
+						+b.A.news-list-item(href="news-item.html")
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/project-item-4.jpg" width="370" height="275" alt="Инновационность")
+							+e.SPAN.title Инновационность
+
+					+e.item 
+						+b.A.news-list-item(href="news-item.html")
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/project-item-5.jpg" width="370" height="275" alt="Регуляторная гильотина")
+							+e.SPAN.title Регуляторная гильотина
+ 
+					+e.item 
+						+b.A.news-list-item(href="news-item.html")
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/project-item-6.jpg" width="370" height="275" alt="Установление показателей назначенного срока службы")
+							+e.SPAN.title Установление показателей назначенного срока службы
+
+
+			+b.SECTION.s-members
+				+e.top
+					+e.top-left
+						+e.H2.title Участники
+
+						+e.slider-arrows.js-slider-arrows
+
+					+e.top-right
+						+e.A.all-link(href="members.html") Подробнее об участниках
+				
+				+e.main
+					+e.slider.js-slider
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-1.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-2.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-3.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-4.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-5.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-6.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-7.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-8.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-2.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-3.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-4.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-5.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-6.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-7.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-8.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-2.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-3.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-4.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-5.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-6.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-7.jpg")
+
+						+e.item 
+							+b.members-item
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-8.jpg")
+
+
+
+
+
+
+
+
+
+							
