@@ -16,6 +16,11 @@ $(document).ready(function () {
 
     tabs();
 
+    headerSearch();
+    mobileMenu();
+
+    commonScript()
+
 
     function tabs() {
         $(document).on('click', '[data-tab-target]', function (e) {
@@ -45,6 +50,157 @@ $(document).ready(function () {
           }, 300)
     
     
+        });
+    }
+
+    function headerSearch() {
+        let opening = false,
+          transitionTime = 300,
+          openClass = 'is-open-header-search',
+          timeout;
+    
+        $body.on('click touch', '.js-header-search-trigger', function (e) {
+          e.preventDefault();
+    
+          if (opening) {
+            return
+          }
+    
+          opening = true;
+    
+          $body.toggleClass(openClass);
+    
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+    
+          timeout = setTimeout(function () {
+            opening = false;
+
+            if (isFormOpen()) {
+                $('.header-search-form input[type=search]').focus();
+            }
+          }, transitionTime)
+    
+        });
+    
+        $body.on('click touch', function (event) {
+          var obj = $(event.target);
+    
+          if ($body.hasClass(openClass)
+            && !obj.closest('.header-search-form').length
+            && !obj.closest('.js-header-search-trigger').length
+            && !obj.hasClass('js-header-search-trigger')
+          ) {
+            $body.removeClass(openClass);
+          }
+        });
+
+        function isFormOpen() {
+            return $body.hasClass(openClass)
+        }
+      }
+    
+      function mobileMenu() {
+        let mobileNav = $('.mobile-menu'),
+          mobileNavIsOpen = mobileNav.hasClass('is-open'),
+          openClass = 'is-mobile-menu-open',
+          opening = false,
+          transitionTime = 300,
+          timeout;
+    
+        $body.on('click touch', '.js-mobile-menu-trigger', function (e) {
+          e.preventDefault();
+    
+    
+          navToggle();
+        });
+    
+    
+        function navToggle() {
+    
+          if (opening) {
+            return
+          }
+    
+          opening = true;
+    
+          mobileNavIsOpen = mobileNav.hasClass('is-open');
+    
+          mobileNav.toggleClass('is-open', !mobileNavIsOpen);
+    
+          $body
+            .removeClass('is-open-choice-language')
+            .removeClass('is-open-top-links');
+    
+    
+          if (!mobileNavIsOpen) {
+            window.globalOptions.freeze(true); //true is scroll to top page
+            $body.toggleClass(openClass, true);
+          }
+    
+          if (timeout) {
+            clearTimeout(timeout)
+          }
+    
+          timeout = setTimeout(function () {
+            mobileNavIsOpen = mobileNav.hasClass('is-open');
+    
+            if (!mobileNavIsOpen) {
+              $body.toggleClass(openClass, false);
+              window.globalOptions.unfreeze();
+    
+    
+            }
+            opening = false;
+          }, transitionTime)
+        };
+      }
+
+    function commonScript() {
+        $('.s-members').each(function() {
+            let wrap = $(this)
+                slider = wrap.find('.js-slider'),
+                prevBtn = wrap.find('.js-slider-prev'),
+                nextBtn = wrap.find('.js-slider-next')
+                ;
+
+            wrap.addClass('is-slider-initialized');
+            slider.slick({
+                // centerMode: true,
+                // variableWidth: true,
+                infinite: true,
+                adaptiveHeight: false,
+                arrows: true,
+                prevArrow: prevBtn,
+                nextArrow: nextBtn,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // responsive: [
+                //     {
+                //         breakpoint: window.globalOptions.sizes.lg,
+                //         settings: {
+                //             slidesToShow: 2,
+                //             slidesToScroll: 2,
+                //         }
+                //     },
+                //     {
+                //         breakpoint: window.globalOptions.sizes.md,
+                //         settings: {
+                //             slidesToShow: 2,
+                //             slidesToScroll: 2,
+                //         }
+                //     },
+                //     {
+                //         breakpoint: window.globalOptions.sizes.sm,
+                //         settings: {
+                //             slidesToShow: 1,
+                //             slidesToScroll: 1,
+                //         }
+                //     }
+                    
+                // ]
+            }); 
         });
     }
 });

@@ -13,27 +13,35 @@
                                 +b.A.header-phone(href="tel:84996438228") 8 (499) 643-82-28 
                             +e.inf-address
                                 +b.SPAN.header-address Москва, ул. Садовая-Спасская, 21/1
-                                
+                        
+                        +e.search-form
+                            +b.header-search-form
+                                form(action="/search" autocomplete="off")
+                                    +e.SPAN.input.input-text
+                                        +e.INPUT.input-field.input-text__field(type="search" name="q" placeholder="Поиск")
+                                    +e.BUTTON.submit(type="submit")
+                                        +e.I.submit-icon
+                                            +icon('search')
+
                     +e.box-top-col-2
-                        +b.header-seacrh
-                            form(action="/search" autocomplete="off")
-                                input.input-text.header-seacrh__input(type="search" name="q" placeholder="Поиск")
-                                button.header-seacrh__submit(type="submit")
-                                    i.header-seacrh__submit-icon
-                                        +icon('search')
-                                button.header-seacrh__toggle(type="button")
-                                    i.header-seacrh__toggle-icon
-                                        +icon('search')
+
+                        +e.search-tirgger
+                            +b.A.header-seacrh-tirgger.js-header-search-trigger(href='/search/')
+                                +e.SPAN.icon.--search
+                                    +icon('search')
+                                +e.SPAN.icon.--close
+                                    +icon('close')
+
 
                 +e.box-bottom
                     +e.nav
                         +b.NAV.header-nav
                             +e.UL.list
                                 +e.LI.item
-                                    +e.A.link(href='#') 
+                                    +e.A.link.--arrow.is-current(href='#') 
                                         | О Союзе
-                                    +e.link-arrow
-                                        +icon('menu-arrow-down')
+                                        +e.link-arrow
+                                            +icon('menu-arrow-down')
                                     +e.lv1-dropdown 
                                         +e.UL.lv1-list
                                             +e.li.lv1-item
@@ -50,11 +58,11 @@
                                                 +e.A.lv1-link(href='#') Порядок вступления 
                             
                                 +e.LI.item
-                                    +e.A.link(href='#') 
+                                    +e.A.link.--arrow(href='#') 
                                         | Комиссии
-                                    +e.link-arrow
-                                        +icon('menu-arrow-down')
-                                    +e.lv1-dropdown 
+                                        +e.link-arrow
+                                            +icon('menu-arrow-down')
+                                    +e.lv1-dropdown
                                         +e.UL.lv1-list
                                             +e.li.lv1-item
                                                 +e.A.lv1-link(href='#') Комиссия по техническому регулированию
@@ -66,10 +74,10 @@
                                                 +e.A.lv1-link(href='#') Научно-технический совет
                             
                                 +e.LI.item
-                                    +e.A.link(href='#') 
+                                    +e.A.link.--arrow(href='#') 
                                         | ПК-7 «Грузовые вагоны»
-                                    +e.link-arrow
-                                        +icon('menu-arrow-down')
+                                        +e.link-arrow
+                                            +icon('menu-arrow-down')
                                     +e.lv1-dropdown 
                                         +e.UL.lv1-list
                                             +e.li.lv1-item
@@ -88,10 +96,10 @@
                                         | Аналитика
                             
                                 +e.LI.item
-                                    +e.A.link(href='#') 
+                                    +e.A.link.--arrow(href='#') 
                                         | Пресс-центр
-                                    +e.link-arrow
-                                        +icon('menu-arrow-down')
+                                        +e.link-arrow
+                                            +icon('menu-arrow-down')
                                     +e.lv1-dropdown 
                                         +e.UL.lv1-list
                                             +e.li.lv1-item
@@ -102,6 +110,5 @@
                                 +e.LI.item
                                     +e.A.link(href='#') 
                                         | Контакты
-                                    +e.link-arrow
-                                        +icon('menu-arrow-down')
+                                        
                             

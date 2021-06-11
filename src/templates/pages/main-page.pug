@@ -86,15 +86,6 @@ block content
 				+e.main
 					+e.main-left
 						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-						input(type="date" value="2021-09-9")
-
 
 					+e.main-right
 						+e.tabs
@@ -154,37 +145,37 @@ block content
 				
 				+e.list
 					+e.item 
-						+b.A.news-list-item(href="news-item.html")
+						+b.A.projects-item(href="projects-item.html")
 							+e.SPAN.picture
 								+e.IMG.picture-img(src="/img/temp/project-item-1.jpg" width="370" height="275" alt="Цифровой грузовой вагон")
 							+e.SPAN.title Цифровой грузовой вагон
 
 					+e.item 
-						+b.A.news-list-item(href="news-item.html")
+						+b.A.projects-item(href="projects-item.html")
 							+e.SPAN.picture
 								+e.IMG.picture-img(src="/img/temp/project-item-2.jpg" width="370" height="275" alt="Переход нового вагоностроения на кассетные подшипники")
 							+e.SPAN.title Переход нового вагоностроения на кассетные подшипники
 
 					+e.item 
-						+b.A.news-list-item(href="news-item.html")
+						+b.A.projects-item(href="projects-item.html")
 							+e.SPAN.picture
 								+e.IMG.picture-img(src="/img/temp/project-item-3.jpg" width="370" height="275" alt="Поддержка грузового вагоностроения")
 							+e.SPAN.title Поддержка грузового вагоностроения
 
 					+e.item 
-						+b.A.news-list-item(href="news-item.html")
+						+b.A.projects-item(href="projects-item.html")
 							+e.SPAN.picture
 								+e.IMG.picture-img(src="/img/temp/project-item-4.jpg" width="370" height="275" alt="Инновационность")
 							+e.SPAN.title Инновационность
 
 					+e.item 
-						+b.A.news-list-item(href="news-item.html")
+						+b.A.projects-item(href="projects-item.html")
 							+e.SPAN.picture
 								+e.IMG.picture-img(src="/img/temp/project-item-5.jpg" width="370" height="275" alt="Регуляторная гильотина")
 							+e.SPAN.title Регуляторная гильотина
  
 					+e.item 
-						+b.A.news-list-item(href="news-item.html")
+						+b.A.projects-item(href="projects-item.html")
 							+e.SPAN.picture
 								+e.IMG.picture-img(src="/img/temp/project-item-6.jpg" width="370" height="275" alt="Установление показателей назначенного срока службы")
 							+e.SPAN.title Установление показателей назначенного срока службы
@@ -195,122 +186,175 @@ block content
 					+e.top-left
 						+e.H2.title Участники
 
-						+e.slider-arrows.js-slider-arrows
+						//- +e.slider-arrows.js-slider-arrows
+						+e.slider-controls
+							+e.slider-controls-prev
+								+b.BUTTON.btn-arrow.--prev.js-slider-prev(type="button")
+									+icon('slider-prev')
+							+e.slider-controls-next
+								+b.BUTTON.btn-arrow.--next.js-slider-next(type="button")
+									+icon('slider-next')
 
 					+e.top-right
 						+e.A.all-link(href="members.html") Подробнее об участниках
 				
 				+e.main
 					+e.slider.js-slider
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-1.jpg")
+						+e.slider-item
+							+e.slider-item-row 
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-1.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-2.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-2.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-3.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-3.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-4.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-4.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-5.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-5.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-6.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-6.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-7.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+							
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-8.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-8.jpg")
+						+e.slider-item
+							+e.slider-item-row
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-6.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-2.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-2.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-3.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-3.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-4.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-4.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-5.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-5.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-6.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-6.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-7.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-3.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-8.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+							
+						+e.slider-item
+							+e.slider-item-row
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-7.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-2.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-8.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-3.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-2.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-4.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-3.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-5.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-4.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-6.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-5.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-7.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-4.png")
 
-						+e.item 
-							+b.members-item
-								+e.SPAN.picture
-									+e.IMG.picture-img(src="/img/temp/members-item-8.jpg")
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+						
+						+e.slider-item
+							+e.slider-item-row
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-8.png")
+
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-1.png")
+
+								+e.item 
+									+b.members-item
+										+e.SPAN.picture
+											+e.IMG.picture-img(src="/img/temp/members-item-2.png")
+
+
+
 
 
 

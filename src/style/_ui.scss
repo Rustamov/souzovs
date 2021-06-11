@@ -97,13 +97,13 @@ frame {
 
   blockquote {
     background: none;
-    border-left: 10px solid $color1;
+    border-left: 10px solid $colorBlack2;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
   }
   blockquote::before {
-    color: $color1;
+    color: $colorBlack2;
     content: open-quote;
     font-size: 4em;
     line-height: 0.1em;
@@ -115,7 +115,7 @@ frame {
   }
 
   a {
-    color: $color5;
+    color: $colorRed;
 
     @include hover{
       color: #000;
@@ -139,6 +139,32 @@ frame {
 
   color: inherit;
   fill: currentColor;
+
+  &-menu-arrow-down {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2px;
+  }
+
+  &-slider-prev {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2px;
+  }
+  &-slider-next {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2px;
+  }
+
+  &-search {
+    fill: none;
+    stroke: currentColor;
+  }
+  &-close {
+    fill: none;
+    stroke: currentColor;
+  }
 
  
 }
@@ -221,6 +247,16 @@ frame {
     }
   }
   &--theme {
+    &-def {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      @include hover{
+        color: $colorOrange;
+        text-decoration: none;
+      }
+    }
     &-white {
       color: #fff;
       transition: color 0.2s;
@@ -237,13 +273,13 @@ frame {
       transition: color 0.2s;
 
       @include hover{
-        color: #333333;
+        color: $colorBlack;
         text-decoration: none;
       }
     }
 
     &-black {
-      color: #333333;
+      color: $colorBlack;
       transition: color 0.2s;
       
       @include hover{
@@ -255,6 +291,182 @@ frame {
 
   }
 }
+
+.parsley-errors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 11px;
+  color: $colorRed;
+  text-align: inherit;
+  pointer-events: none;
+}
+
+textarea {
+resize: vertical;
+}
+
+.input-text {
+  $b: &;
+
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-align: left;
+
+  &__label {
+    display: block;
+    @include rule(margin, (xs: 0 0 10px, lg: 0 0 15px));
+    @include rule(font-size, (xs: 18px, lg: 22px));
+    line-height: 1.3;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 15px 20px 16px 20px;
+    font-size: inherit;
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: inherit;
+    color: inherit;
+    border: 1px solid transparent;
+    background: #fff;
+    outline: none;
+    box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    transition: color 0.2s, border 0.2s;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.06);
+      outline: none;
+      border-color: rgb(199, 140, 41);
+    }
+
+    &.parsley-error {
+      border-color: $colorRed;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &::placeholder {
+      color: inherit;
+      opacity: 0.7;
+    }
+
+  }
+
+    
+  &__placeholder {
+    position: absolute;
+    height: auto;
+    top: 17px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: inherit;
+    font-style: normal;
+    pointer-events: none;
+    color: #a1a0a0;
+    transform-origin: 0% 0%;
+    transition: transform 0.2s, opacity 0.2s;
+    
+    .input-text--dirty & {
+      text-shadow: 1px 1px #000;
+      opacity: 0;
+      transform: translate(20px, 2px) scale(0.8);
+    }
+      
+    .parsley-error ~ & {
+      color: $colorRed;
+    }
+
+  }
+
+  & .parsley-errors-list {
+    display: none;
+    align-items: center;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    padding: 3px 10px;
+    text-align: left;
+    left: auto;
+    max-width: 36%;
+    overflow: hidden;
+    color: #fff;
+    background: $colorRed;
+    border-radius: 3px;
+  }    
+  &--label .parsley-errors-list {
+    @include rule(top, (xs: 38px, lg: 48px));
+  }
+  & .parsley-error ~ .parsley-errors-list {
+    display: flex;
+  }
+
+}
+
+.btn-arrow {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+  font-style: normal;
+  font-family: inherit;
+  color: inherit;
+  white-space: nowrap;
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: none;
+  transition: color 0.2s, background 0.2s;
+  cursor: pointer;
+
+  &.slick-disabled,
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  
+  &:hover,
+  &:active {
+    color: $colorOrange;
+    background: none;
+  }
+
+  .svg-icon {
+    width: 10px;
+    height: 16px;
+    stroke: currentColor;
+  }
+}
+
+
 .ui-sitemap {
   li {
     margin-bottom: 5px;
@@ -276,7 +488,7 @@ frame {
 
 
 .imp-sign {
-  color: $color1;
+  color: $colorBlack2;
   font-style: normal;
   font-weight: normal;
 }
