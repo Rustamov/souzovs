@@ -1,0 +1,387 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Участники"
+
+block content
+	main.main
+		.container
+			+b.SECTION.top-banner
+				+e.bg
+					+e.IMG.bg-img(src="/img/temp/top-banner.jpg" alt="Участники" width="1170" height="270")
+
+			.breadcrumbs-block
+				+breadcrumbs(["О союзе"], title) 
+
+			+b.page-title
+				h1 #{title}
+
+				+e.A.link(href="#") Как вступить в Союз?
+
+
+			+b.SECTION.s-union-participants 
+
+				+e.sec-title Производственные предпрития
+
+				+e.list.--mb
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-1.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «НПК «Уралвагонзавод»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-2.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «НПК «Уралвагонзавод»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-3.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «Тихвинский вагоностроительный завод»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-4.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «Уралкриомаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «ТихвинХимМаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «НПК «ТихвинСпецМаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+
+							+e.col-descr
+								+e.SPAN.title СЗАО «Могилевский вагоностроительный завод»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+									
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-4.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «Уралкриомаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «ТихвинХимМаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «НПК «ТихвинСпецМаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+
+							+e.col-descr
+								+e.SPAN.title СЗАО «Могилевский вагоностроительный завод»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+
+				+e.sec-title Научно-исследовательский комплекс
+
+				+e.list
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-1.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «НПК «Уралвагонзавод»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+
+
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-4.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «Уралкриомаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «ТихвинХимМаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+							+e.col-descr
+								+e.SPAN.title АО «НПК «ТихвинСпецМаш»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+			
+					+e.item 
+						+b.union-participant
+							+e.col-img
+								+e.SPAN.picture
+									+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+
+							+e.col-descr
+								+e.SPAN.title СЗАО «Могилевский вагоностроительный завод»
+								+e.text.text
+									p Предприятие транспортного машиностроения по выпуску вагонов-цистерн нового поколения. Расположен на территории промышленной площадки в г. Тихвине В этом блоке максимум 4 строки
+							
+							+e.col-inf
+								+e.SPAN.phone
+									+e.A.phone-link(href="tel:+78136731580") +7 (81367) 31 580
+								
+								+e.SPAN.address.text 
+									p 187555, Россия, Ленинградская область, город Тихвин, Промплощадка
+
+								+e.SPAN.email
+									+e.A.email-link(href="mailto:tcmash.ru") tcmash.ru
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

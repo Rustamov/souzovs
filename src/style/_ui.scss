@@ -3,9 +3,48 @@ frame {
   max-width: 100%;
 }
 
+h1 {
+  font-size: 52px;
+  line-height: 1.45;
+}
+h2 {
+  font-size: 32px;
+  line-height: 1.45;
+}
+h3 {
+  font-size: 28px;
+  line-height: 1.45;
+}
+h4 {
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+ul {
+  line-height: 1.45;
+}
+ol {
+  line-height: 1.45;
+}
+
+hr {  
+  margin: 0.5em 0;
+  border: none;
+  border-bottom: 1px solid $colorGray;
+}
+
+a {
+  color: $colorRed;
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
 .text {
-  @include rule(font-size, (xs: 14px, lg: 18px));
-  line-height: calc(30/18);
+  font-size: 18px;
+  line-height: calc(26/18);
   font-weight: 400;
   font-style: normal;
 
@@ -15,7 +54,7 @@ frame {
   h4,
   h5,
   h6 {
-    margin: 0.8em 0 0.4em;
+    margin: 1em 0 0.5em;
   }
 
   h1:first-child,
@@ -62,7 +101,7 @@ frame {
   }
 
   p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     
     &:first-child {
       margin-top: 0;
@@ -114,16 +153,7 @@ frame {
     display: inline;
   }
 
-  a {
-    color: $colorRed;
-
-    @include hover{
-      color: #000;
-      text-decoration: none;
-    }
-    // @extend .link;
-    // @extend .link--theme-red;
-  }
+  
 }
 
 
@@ -467,16 +497,7 @@ resize: vertical;
 }
 
 
-.ui-sitemap {
-  li {
-    margin-bottom: 5px;
-  }
-  a {
-    // color: #fff;
-    @extend .link;
-    @extend .link--theme-white;
-  }
-}
+
 .ui-popups {
   padding: 40px 0;  
   .popup {
@@ -759,6 +780,25 @@ resize: vertical;
 }
 
 
+.title {
+  display: block;
+  margin: 0;
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 700;
+  font-style: normal;
+  color: inherit;
+}
+.title-h2 {
+  display: block;
+  margin: 0;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 700;
+  font-style: normal;
+  color: inherit;
+}
+
 .section-title {
   display: block;
   margin: 0;
@@ -838,3 +878,25 @@ resize: vertical;
   }
 }
 
+
+
+.ui-sitemap {
+  margin: 50px 0 100px;
+
+  @include screen(md, max) {
+    margin: 50px 0 0 30px;
+  }
+
+  li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    @extend .link-resset;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

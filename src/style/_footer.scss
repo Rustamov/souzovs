@@ -1,0 +1,162 @@
+.footer-link {
+    @extend .link-resset;
+    color: $colorGray4;
+    font-size: 16px;
+    line-height: calc(22/16);
+    font-weight: 700;
+    transition: color 0.2s;
+  
+    &:hover {
+      color: $colorOrange;
+    }
+  }
+  .footer-link-2 {
+    @extend .link-resset;
+    color: $colorGray5;
+    font-size: 16px;
+    line-height: calc(24/16);
+    transition: color 0.2s;
+    
+    &:hover {
+      color: $colorOrange;
+    }
+  }
+  
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+  
+    &__col {
+      max-width: 230px;
+      padding: 0 10px;
+    }
+    
+  
+    &__title {
+      display: block;
+      margin: 0 0 15px;
+  
+      &--single-mb {
+        margin-bottom: 40px;
+      }
+  
+      &-link {
+        @extend .footer-link;
+      }
+    }
+  
+    
+    &__list {
+      @extend .list-resset;
+  
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+    &__item {
+  
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+    &__link {
+      @extend .footer-link-2;
+    }
+  }
+  
+  .footer-inf {
+  
+    &__title {
+      display: block;
+      margin: 0 0 15px;
+  
+      &-link {
+        @extend .footer-link;
+      }
+    }
+  
+    &__phones {
+      &:not(:last-child) {
+        margin-bottom: 13px;
+      }
+  
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+  
+      &-link {
+        @extend .footer-link-2;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  
+    &__address {
+      display: block;
+      margin: 0;
+      font-size: 16px;
+      line-height: calc(24/16);
+      font-style: normal;
+  
+      &:not(:last-child) {
+        margin-bottom: 13px;
+      }
+    }
+  
+    &__email {
+      &:not(:last-child) {
+        margin-bottom: 13px;
+      }    
+      &-link {
+        @extend .footer-link-2;
+      }
+    }
+  }
+  
+  .footer {
+    background: $colorBlack2;
+    color: $colorGray5;
+  
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      padding: 45px 0 85px;
+      
+      &-col {
+        &-menu {
+          width: 70%;
+        }
+  
+        &-inf {
+        }
+  
+      }
+    }
+  
+  
+    &__bottom {
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      
+      &-col {
+        &-menu {
+          width: 70%;
+        }
+  
+        &-inf {
+        }
+  
+      }
+    }
+  
+    &__copy {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+    }
+  
+  }
