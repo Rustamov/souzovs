@@ -1,0 +1,385 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Научно-технический совет"
+
+block content
+	main.main
+		.container
+			.breadcrumbs-block
+				+breadcrumbs(["Комиссии"], title) 
+
+			+b.H1.page-title.--commission #{title}
+
+
+			+b.SECTION.s-union-commission
+				//- +e.tabs
+				
+				+b.UL.tabs.__tabs
+					+e.LI.tab.is-active(data-tab-target="commission-tab-1") О Комиссии
+					+e.LI.tab(data-tab-target="commission-tab-2") Заседания
+					+e.LI.tab(data-tab-target="commission-tab-3") Документы
+						 
+				+b.tabs-content.__tabs-content
+					+e.wrap.is-active(data-tab="commission-tab-1" data-tab-group="commission-tabs")
+						+e.wrap-inner
+							.s-union-commission__text-box 
+								.text
+									
+									h3 Цели и направления работы
+									p Прием в члены Союза «Объединение вагоностроителей» осуществляется на основании письменного Заявления, поданного на имя Президента Союза или Исполнительного директора. 
+									p В Заявлении о приеме должно содержаться безусловное согласие с целями Союза, признание его Устава и согласие выполнять все обязательства членов Союза, возложенные на них Уставом. Президент Союза или Исполнительный директор направляет Заявление о приеме в Наблюдательный Совет с рекомендациями о возможности принятия указанного лица в состав Союза.
+									hr
+
+									h3 Руководитель комиссии
+									p 
+										| Иванов Иван Иванович
+										br
+										span(style="color: #707070") Исполнительный директор Союза
+									hr
+
+									h3 Состав Комиссии
+
+									p
+										+b.A.file-link(href="file.pdf") 
+											+e.I.icon
+												+icon-dif("file-pdf") 
+											+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+					+e.wrap(data-tab="commission-tab-2" data-tab-group="commission-tabs")
+						+e.wrap-inner
+							.s-union-commission__meetings-box
+								+b.meetings
+									+e.top
+										+e.choice
+											+e.SPAN.choice-text-before Заседания в
+											+e.choice-select-wrap
+												+e.SELECT.choice-select.js-select
+													option 2021
+													option 2020
+													option 2019
+													option 2018
+													option 2017
+											+e.SPAN.choice-text-after году
+
+									+e.acc
+										+b.meetings-acc
+											+e.item.js-accordion-item
+												+e.title.js-accordion-title
+													+e.title-icon
+														+e.SPAN.title-icon-1
+															+icon-dif('folder')
+														+e.SPAN.title-icon-2
+															+icon-dif('folder-open')
+
+													+e.title-label
+														+e.SPAN.title-name Итоги заседания Научно-технического совета Союза
+														+e.SPAN.title-date 13.05.2021
+
+													+e.SPAN.title-arrow
+														+icon("arrow-right")
+
+												+e.content.js-accordion-content
+													.text
+														h6 Материалы заседания
+
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+
+														h6 Протокол заседания
+														
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+
+											+e.item.js-accordion-item.is-active
+												+e.title.js-accordion-title
+													+e.title-icon
+														+e.SPAN.title-icon-1
+															+icon-dif('folder')
+														+e.SPAN.title-icon-2
+															+icon-dif('folder-open')
+
+													+e.title-label
+														+e.SPAN.title-name Итоги заседания Научно-технического совета Союза
+														+e.SPAN.title-date 13.05.2021
+
+													+e.SPAN.title-arrow
+														+icon("arrow-right")
+
+												+e.content.js-accordion-content(style="display: block;")
+													.text
+														h6 Материалы заседания
+
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+
+														h6 Протокол заседания
+														
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+
+											+e.item.js-accordion-item
+												+e.title.js-accordion-title
+													+e.title-icon
+														+e.SPAN.title-icon-1
+															+icon-dif('folder')
+														+e.SPAN.title-icon-2
+															+icon-dif('folder-open')
+
+													+e.title-label
+														+e.SPAN.title-name Итоги заседания Научно-технического совета Союза
+														+e.SPAN.title-date 13.05.2021
+
+													+e.SPAN.title-arrow
+														+icon("arrow-right")
+
+												+e.content.js-accordion-content
+													.text
+														h6 Материалы заседания
+
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+
+														h6 Протокол заседания
+														
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+
+											+e.item.js-accordion-item
+												+e.title.js-accordion-title
+													+e.title-icon
+														+e.SPAN.title-icon-1
+															+icon-dif('folder')
+														+e.SPAN.title-icon-2
+															+icon-dif('folder-open')
+
+													+e.title-label
+														+e.SPAN.title-name Итоги заседания Научно-технического совета Союза
+														+e.SPAN.title-date 13.05.2021
+
+													+e.SPAN.title-arrow
+														+icon("arrow-right")
+
+												+e.content.js-accordion-content
+													.text
+														h6 Материалы заседания
+
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+
+														h6 Протокол заседания
+														
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+
+											+e.item.js-accordion-item
+												+e.title.js-accordion-title
+													+e.title-icon
+														+e.SPAN.title-icon-1
+															+icon-dif('folder')
+														+e.SPAN.title-icon-2
+															+icon-dif('folder-open')
+
+													+e.title-label
+														+e.SPAN.title-name Итоги заседания Научно-технического совета Союза
+														+e.SPAN.title-date 13.05.2021
+
+													+e.SPAN.title-arrow
+														+icon("arrow-right")
+
+												+e.content.js-accordion-content
+													.text
+														h6 Материалы заседания
+
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+
+														h6 Протокол заседания
+														
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+
+											+e.item.js-accordion-item
+												+e.title.js-accordion-title
+													+e.title-icon
+														+e.SPAN.title-icon-1
+															+icon-dif('folder')
+														+e.SPAN.title-icon-2
+															+icon-dif('folder-open')
+
+													+e.title-label
+														+e.SPAN.title-name Итоги заседания Научно-технического совета Союза
+														+e.SPAN.title-date 13.05.2021
+
+													+e.SPAN.title-arrow
+														+icon("arrow-right")
+
+												+e.content.js-accordion-content
+													.text
+														h6 Материалы заседания
+
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+														hr
+
+														h6 Протокол заседания
+														
+														+b.A.file-link(href="file.pdf") 
+															+e.I.icon
+																+icon-dif("file-pdf") 
+															+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+
+
+
+
+					+e.wrap(data-tab="commission-tab-3" data-tab-group="commission-tabs")
+						+e.wrap-inner
+							.s-union-commission__documents-box
+								.text
+									h3 Документы
+									
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+									hr
+
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+									hr
+
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+									hr
+
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+									hr
+
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+									hr
+
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+									hr
+
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+									hr
+
+									+b.A.file-link(href="file.pdf") 
+										+e.I.icon
+											+icon-dif("file-pdf") 
+										+e.SPAN.label Состав Комиссии по техническому регулированию.pdf
+
+
+
+
+							

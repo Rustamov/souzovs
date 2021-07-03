@@ -1,0 +1,206 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Члены Подкомитета"
+
+block content
+	main.main
+		.container
+			+b.SECTION.top-banner
+				+e.bg
+					+e.IMG.bg-img(src="/img/temp/top-banner.jpg" alt="Члены Подкомитета" width="1170" height="270")
+
+			.breadcrumbs-block
+				+breadcrumbs(["ПК-7 «Грузовые вагоны»"], title) 
+
+			h1.page-title #{title}
+
+
+			+b.SECTION.s-pk-participants 
+
+				+e.text.text
+					p Заявлении о приеме должно содержаться безусловное согласие с целями Союза, признание его Устава и согласие выполнять все обязательства членов Союза, возложенные на них Уставом. Президент Союза или Исполнительный директор направляет Заявление о приеме в Наблюдательный Совет с рекомендациями о возможности принятия указанного лица в состав Союза. 
+					p По поступлении от Президента Союза или Исполнительного директора Союза Заявления о приеме, Наблюдательный Совет созывает в соответствии с требованиями Устава Общее собрание членов Союза.
+
+				+e.sec-title Производственные предпрития
+
+				+e.list.--mb 
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-1.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-2.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-3.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-4.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+				
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-8.png")
+
+
+				+e.sec-title Федеральные органы исполнительной власти
+
+				+e.list.--mb 
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-1.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-2.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-3.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-4.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+				
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-8.png")
+
+				+e.sec-title Операторы подвжного состава
+
+				+e.list.--mb 
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-1.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-2.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-3.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-4.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+				
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-8.png")
+
+
+				+e.sec-title Вагоностроительный комплекс
+
+				+e.list
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-1.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-2.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-3.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-4.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-5.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-6.png")
+
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-7.png")
+				
+					+e.item 
+						+b.members-item
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/members-item-8.png")
+
+
+
+
+
+
+
+

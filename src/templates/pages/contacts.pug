@@ -1,0 +1,64 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Контакты"
+
+block content
+	main.main
+		.container
+			+b.SECTION.top-banner
+				+e.bg
+					+e.IMG.bg-img(src="/img/temp/top-banner.jpg" alt="Контакты" width="1170" height="270")
+
+			.breadcrumbs-block
+				+breadcrumbs([], title) 
+
+			h1.page-title #{title}
+
+			+b.SECTION.s-contacts
+
+				+e.text.text 
+					h2.mb--1em Исполнительная дирекция Союза
+
+					p
+						b Юридический и фактический адрес:
+						br
+						| Россия, 107217, г. Москва, улица Садовая-Спасская, д.21/1, 3 этаж, офис 307
+
+					p
+						b Телефон:
+						br
+						a.link-resset.link--theme-black(href="+74996438220") +7 499 643-82-20
+						br
+						a.link-resset.link--theme-black(href="+74996438221") +7 499 643-82-21 
+					p
+						b Адрес электронной почты:
+						br
+						a.link-resset.link--theme-orange(href="mailto:info@souzovs.com  ") info@souzovs.com  
+
+					p
+						b Почтовый адрес для корреспонденции:
+						br
+						| 107078, г. Москва, ул. Новая Басманная, д. 15, стр.1, а/я №63
+
+				+e.map
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+					+e.map.map.js-map-yandex(
+						data-geolocation=""
+						data-zoom=""
+						)
+						ul.map__points.js-map-yandex-points(
+							data-zoom="16"
+							data-c-lat="55.769525"
+							data-c-long="37.649320"
+							)
+							li(
+								data-lat="55.769525"
+								data-long="37.649320"
+								data-title="Россия, 107217, г. Москва, улица Садовая-Спасская, д.21/1"
+								)  
+						.map__area.js-map-yandex-area
+
+
+

@@ -658,6 +658,10 @@ body {
     border-bottom: none;
   }
 
+  &--commission {
+    margin-bottom: 60px;
+  }
+
   h1,
   h2 {
     margin: 0;
@@ -1233,6 +1237,174 @@ body {
 
 }
 
+
+.s-pk-participants {
+  
+  &__sec-title {
+    @extend .title-h2;
+    margin: 0 0 30px;
+  }
+
+  &__text {
+    margin: 0 0 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -30px -15px 0;
+
+    &--mb {
+      margin-bottom: 60px;
+    }
+  }
+  &__item {
+    width: 25%;
+    padding: 30px 15px 0;
+    
+  }
+
+}
+
+.s-contacts {
+  &__text {
+    margin: 0 0 40px;
+  }
+  &__map {
+    height: 360px;
+  }
+}
+
+.meetings-acc {
+  $item: ".meetings-acc__item";
+
+  &__item {
+    border-top: 1px solid #EDEDED;
+  }
+  &__title {
+    $title: &;
+
+    display: flex;
+    position: relative;
+    padding: 20px 50px 20px 0;
+    cursor: pointer;
+
+    &-icon {
+      position: relative;
+      flex-shrink: 0;
+      width: 50px;
+      height: 33px;
+      margin-right: 18px;
+      
+      .svg-icon {
+        @include center-block;
+        width: 54px;
+        height: 54px;
+      }
+      
+      &-1 {
+        opacity: 1;
+        transition: opacity 0.2s;
+        
+        #{$title}:hover &,
+        #{$item}.is-active & {
+          opacity: 0;
+        }
+      }
+      &-2 {
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        #{$title}:hover &,
+        #{$item}.is-active & {
+          opacity: 1;
+        }
+      }
+      
+    }
+      
+    
+    &-label {}
+    &-name {
+      display: block;
+      margin: -4px 0 4px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    &-date {
+      display: block;
+      margin: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: calc(18/14);
+      color: #707070;
+    }
+
+    &-arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 45px;
+      color: #9A9A9A;
+      transition: transform 0.2s;
+
+      .svg-icon {
+        @include center-block;
+        width: 9px;
+        height: 14px;
+      }
+   
+      
+      #{$item}.is-active & {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 20px 0 40px 68px;
+
+    #{$item}.is-active & {
+      // display: block;
+    }
+  }
+    
+}
+
+.meetings {
+
+  &__top {
+    display: flex;
+    margin: 0 0 20px;
+  }
+  &__choice {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    &-select {
+      &-wrap {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+
+.s-union-commission {
+
+  &__text-box {
+    padding-top: 40px; 
+  }
+  &__meetings-box {
+    padding-top: 20px; 
+  }
+  &__documents-box {
+    padding-top: 30px; 
+  }
+}
 
 @import 'header';
 @import 'footer';

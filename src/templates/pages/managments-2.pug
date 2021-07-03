@@ -1,0 +1,60 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Руководство"
+
+block content
+	main.main
+		.container
+			+b.SECTION.top-banner
+				+e.bg
+					+e.IMG.bg-img(src="/img/temp/top-banner.jpg" alt="Руководство" width="1170" height="270")
+
+			.breadcrumbs-block
+				+breadcrumbs(["ПК-7 «Грузовые вагоны»"], title) 
+
+			h1.page-title #{title}
+
+
+			+b.SECTION.s-union-managments
+				+e.list
+					+e.list-col
+						+b.person 
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/person-item-1.png")
+							+e.SPAN.name 
+								| Артяков
+								br
+								| Владимир Владимирович
+							+e.SPAN.descr.text 
+								| Председатель
+								br
+								| Наблюдательного совета
+								
+					+e.list-col
+						+b.person 
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/person-item-2.png")
+							+e.SPAN.name 
+								| Андреев
+								br
+								| Александр Петрович
+							+e.SPAN.descr.text 
+							| Председатель
+							br
+							| Наблюдательного совета
+
+					+e.list-col
+						+b.person 
+							+e.SPAN.picture
+								+e.IMG.picture-img(src="/img/temp/person-item-2.png")
+							+e.SPAN.name 
+								| Андреев
+								br
+								| Александр Петрович
+							+e.SPAN.descr.text 
+								| Член Наблюдательного совета,
+								br
+								| Исполнительный директор Союза
+
