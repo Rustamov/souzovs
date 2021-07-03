@@ -5,7 +5,7 @@
 ### Клонируй репозиторий
 
 ```
-git clone https://github.com/Rustamov/project-name.git && cd project-name
+git clone https://github.com/Rustamov/souzovs.git && cd souzovs
 ```
 
 ### Установи зависимости
